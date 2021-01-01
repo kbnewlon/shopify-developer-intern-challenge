@@ -32,7 +32,8 @@ Copyright (c) 2020, Kayla Newlon.
 
 
 ## **Technologies**
-* 
+* React.js
+* Material-ui
 
 ## **Questions**
 Contact me at kayla.b.newlon@gmail.com for any questions 
