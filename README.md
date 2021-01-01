@@ -5,8 +5,8 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/kbnewlon/shopify-developer-intern-challenge) ![Libraries.io dependency status for GitHub repo](https://img.shields.io/badge/license-MIT_License-yellowgreen)
 
 ## Description
-TASK: Build an image repository
-Add search, add, and delete functions to app
+I am creating this app as a part of my application for the Shopify Developer Internship 2021. This app will be an image repository with CRUD functionality.
+
 
 Link to deployed application: 
 
@@ -22,7 +22,7 @@ Link to deployed application:
 
 
 ## **Usage**
-As a user
+
  
 
 
