@@ -1,14 +1,17 @@
-//this is where all the magic happens. below are the functions that manipulate the API and make it responsive 
 import React from 'react';
 import './App.css';
 import Header from './component/Header';
-import Fuse from 'fuse.js';
+import SearchForm from './component/SearchForm';
+import '@shopify/polaris/dist/styles.css';
 
 
 function App() {
   return (
+    <div>
     <Header />
-    
+
+    <SearchForm />
+    </div>
   );
 }
 

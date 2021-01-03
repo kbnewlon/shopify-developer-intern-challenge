@@ -1,13 +1,12 @@
 //this is the component for the pages' header
 import React from 'react';
 import './style.css';
-
+import { Heading } from '@shopify/polaris/dist/styles.css';
 
 export default function Header(){
     return(
-<div>
-    <h1 className="row justify-content-center header">Washington State Adventures</h1>
-</div>
+
+<Heading>Online store dashboard</Heading>
 
 
     );
