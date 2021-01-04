@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState, useCallback, SearchMinor} from 'react';
 import '@shopify/polaris/dist/styles.css';
-
-
+import {Autocomplete, Icon} from '@shopify/polaris';
+import './style.css'
 
 
 
@@ -53,7 +53,7 @@ export default function SearchForm() {
   const textField = (
     <Autocomplete.TextField
       onChange={updateText}
-      label="Tags"
+      label=""
       value={inputValue}
       prefix={<Icon source={SearchMinor} color="inkLighter" />}
       placeholder="Search"
@@ -61,15 +61,15 @@ export default function SearchForm() {
   );
 
 
-    return (
-      <div style={{ height: '225px' }}>
-        <Autocomplete
-          options={options}
-          selected={selectedOptions}
-          onSelect={updateSelection}
-          textField={textField}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className='searchBar'>
+      <Autocomplete
+        options={options}
+        selected={selectedOptions}
+        onSelect={updateSelection}
+        textField={textField}
+      />
+    </div>
+  );
+}
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '@shopify/polaris/dist/styles.css';
 
 
-export default function TopBarExample() {
+export default function TopBar() {
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
     const [isSecondaryMenuOpen, setIsSecondaryMenuOpen] = useState(false);
     const [isSearchActive, setIsSearchActive] = useState(false);

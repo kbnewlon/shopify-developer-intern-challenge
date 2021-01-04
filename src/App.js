@@ -1,18 +1,20 @@
 import React from 'react';
 import './App.css';
-import Header from './component/Header';
-import SearchForm from './component/SearchForm';
 import '@shopify/polaris/dist/styles.css';
+import enTranslations from '@shopify/polaris/locales/en.json';
+import {AppProvider, Page, TopBar, Frame} from '@shopify/polaris';
+import SearchForm from './component/SearchForm'
 
 
-function App() {
-  return (
-    <div>
-    <Header />
-
+function App(){
+  return(
+  <AppProvider i18n={enTranslations}>
+  
+    <TopBar />
     <SearchForm />
-    </div>
-  );
-}
+    <Page title="Reasons I want to work at Shopify"><p>An Interactive Experience by Kayla Newlon</p></Page>
+
+  </AppProvider>
+  )};
 
 export default App;
