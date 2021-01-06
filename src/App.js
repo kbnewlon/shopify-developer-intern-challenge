@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import API from './utils/API';
 import './App.css';
 import '@shopify/polaris/dist/styles.css';
 import enTranslations from '@shopify/polaris/locales/en.json';
-import { AppProvider, Page, TopBar, MediaCard } from '@shopify/polaris';
+import { AppProvider, Page, TopBar } from '@shopify/polaris';
 import SearchForm from './component/SearchForm';
 import Card from './component/Card';
 
