@@ -3,15 +3,14 @@ import './App.css';
 import '@shopify/polaris/dist/styles.css';
 import enTranslations from '@shopify/polaris/locales/en.json';
 import { AppProvider, Page, TopBar } from '@shopify/polaris';
-import SearchForm from './component/SearchForm';
-import Card from './component/Card';
-import axios from 'axios';
+import Gallery from './component/Gallery';
 
 
 function App() {
 
   const [loading, setLoading] = useState(false)
   const [image, setImage] = useState("")
+
 
   const uploadImage = async e => {
     const files = e.target.files
@@ -27,12 +26,15 @@ function App() {
       })
 
     const file = await res.json()
-
     console.log(file)
 
     setImage(file.secure_url)
     setLoading(false)
+
   }
+
+
+
   return (
 
     <AppProvider i18n={enTranslations}>
@@ -40,8 +42,8 @@ function App() {
       <div className="App">
 
         <TopBar className="topBar" />
-        <Page title="Upload Image to Cloudinary with React"><p>Also made with Polaris, cause I really want this job.</p></Page>
-        <input type="file" name="file" placeholder="Upload an Image" onChange={uploadImage} />
+        <Page title="Upload Image to Cloudinary with React"><p>Also Made with Polaris, Because I Really Want This Job.</p></Page>
+        <input type="file" name="Image" placeholder="Upload an Image" onChange={uploadImage} />
         {
           loading ? (
             <h3>Loading...</h3>
@@ -49,7 +51,11 @@ function App() {
               <img src={image} style={{ width: '300px' }} />
             )
         }
+        <div className="container">
+         
+        <img src={Gallery} style={{ width: '300px' }} />
 
+        </div>
       </div>
 
     </AppProvider>
