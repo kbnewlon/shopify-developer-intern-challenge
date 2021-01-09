@@ -3,11 +3,12 @@ import './App.css';
 import '@shopify/polaris/dist/styles.css';
 import enTranslations from '@shopify/polaris/locales/en.json';
 import { AppProvider, Page, TopBar } from '@shopify/polaris';
-import Gallery from './component/Gallery';
+import Gallery from './component/Gallery'
+
 
 
 function App() {
-
+  //upload image to cloudinary
   const [loading, setLoading] = useState(false)
   const [image, setImage] = useState("")
 
@@ -34,7 +35,6 @@ function App() {
   }
 
 
-
   return (
 
     <AppProvider i18n={enTranslations}>
@@ -51,9 +51,12 @@ function App() {
               <img src={image} style={{ width: '300px' }} />
             )
         }
-        <div className="container">
-         
-        <img src={Gallery} style={{ width: '300px' }} />
+
+
+        <div className="gallery">
+
+          <Gallery />
+
 
         </div>
       </div>
