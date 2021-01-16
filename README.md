@@ -6,8 +6,8 @@
 I made this Image Repository as a part of my Shopify Developer Internship application. 
 
 
-
-Link to deployed application: 
+<br>
+Link to deployed application: https://kbnewlon.github.io/shopify-developer-intern-challenge/
 
 ## **Table of Contents**
 
@@ -47,4 +47,4 @@ Contact me at kayla.b.newlon@gmail.com for any questions
 
 ## **Links**
 Repo: https://github.com/kbnewlon/shopify-developer-intern-challenge
-<br>Deployed Application: 
+<br>Deployed Application: https://kbnewlon.github.io/shopify-developer-intern-challenge/

@@ -17,7 +17,7 @@ class Main extends Component {
     }
     componentDidMount() {
         //pull images in ShopifyInternshipChallenge Folder on Cloudinary
-        axios.get('https://res.cloudinary.com/kaylanewlon/image/upload/v1610779191/ShopifyInternshipChallenge.json')
+        axios.get('https://res.cloudinary.com/kaylanewlon/image/list/ShopifyInternshipChallenge.json')
             .then(res => {
                 console.log(res.data.resources);
                 this.setState({ gallery: res.data.resources });
@@ -25,7 +25,7 @@ class Main extends Component {
     }
     uploadWidget() {
         let _this = this;
-        window.cloudinary.openUploadWidget({ cloud_name: 'kaylanewlon', upload_preset: 'ShopifyInternshipChallenge' },
+        window.cloudinary.openUploadWidget({ cloud_name: 'kaylanewlon', upload_preset: 'ShopifyInternshipChallenge', tags:['ShopifyInternshipChallenge'] },
             function (error, result) {
                 // Update gallery state with newly uploaded image
                 _this.setState({ gallery: _this.state.gallery.concat(result) })
@@ -50,7 +50,7 @@ class Main extends Component {
                                         return (
                                             <div className="responsive" key={data.public_id}>
                                                 <div className="img">
-                                                    <a target="_blank" rel="noreferrer" href={`https://res.cloudinary.com/kaylanewlon/image/upload/v1610779191/ShopifyInternshipChallenge/${data.public_id}.jpg`}>
+                                                    <a target="_blank" rel="noreferrer" href={`https://res.cloudinary.com/kaylanewlon/image/upload/${data.public_id}.jpg`}>
                                                         <Image publicId={data.public_id}>
                                                             <Transformation
                                                                 crop="scale"
