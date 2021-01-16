@@ -1,11 +1,9 @@
 # Shopify-Developer-Internship-Challenge-2021
 
-
-
 ![GitHub top language](https://img.shields.io/github/languages/top/kbnewlon/shopify-developer-intern-challenge) ![Libraries.io dependency status for GitHub repo](https://img.shields.io/badge/license-MIT_License-yellowgreen)
 
 ## Description
-I am creating this app as a part of my application for the Shopify Developer Internship 2021. This app will be an image repository with CRUD functionality.
+I made this Image Repository as a part of my Shopify Developer Internship application. 
 
 
 
@@ -23,18 +21,17 @@ Link to deployed application:
 
 
 ## **Usage**
-
- 
-
+Click on 'Add Image' to upload an image to this page. Future development includes deleting, searching, as well as selling and buying images. 
 
 ## **License**
 Copyright (c) 2020, Kayla Newlon. 
 
-
-
 ## **Technologies**
 * React.js
 * Polaris
+* Cloudinary 
+* WebPack
+* Axios
 
 ## **Questions**
 Contact me at kayla.b.newlon@gmail.com for any questions 
@@ -46,7 +43,6 @@ Contact me at kayla.b.newlon@gmail.com for any questions
 ![]()
 
 ## **Demo**
-
 
 
 ## **Links**

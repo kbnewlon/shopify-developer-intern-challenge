@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.upload-button{
+  margin-top: 50px;
+  margin-left: 50%;
+}
+
+.Polaris-TopBar__Contents{
+  background-color:green;
+
+}
+
+.Polaris-FooterHelp{
+ float: shrink 0;
+}
