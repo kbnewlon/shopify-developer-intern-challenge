@@ -8,6 +8,7 @@ import { AppProvider, Page, TopBar, FooterHelp, Link } from '@shopify/polaris';
 import './index.css';
 
 class Main extends Component {
+    //set gallery state
     constructor(props) {
         super(props);
         this.state = {
@@ -15,8 +16,8 @@ class Main extends Component {
         }
     }
     componentDidMount() {
-        // Request for images tagged xmas       
-        axios.get('https://res.cloudinary.com/kaylanewlon/image/upload/v1610088882/ShopifyInternshipChallenge.json')
+        //pull images in ShopifyInternshipChallenge Folder on Cloudinary
+        axios.get('https://res.cloudinary.com/kaylanewlon/image/upload/v1610779191/ShopifyInternshipChallenge.json')
             .then(res => {
                 console.log(res.data.resources);
                 this.setState({ gallery: res.data.resources });
@@ -49,7 +50,7 @@ class Main extends Component {
                                         return (
                                             <div className="responsive" key={data.public_id}>
                                                 <div className="img">
-                                                    <a target="_blank" rel="noreferrer" href={`https://res.cloudinary.com/kaylanewlon/image/upload/v1610088882/ShopifyInternshipChallenge/${data.public_id}.jpg`}>
+                                                    <a target="_blank" rel="noreferrer" href={`https://res.cloudinary.com/kaylanewlon/image/upload/v1610779191/ShopifyInternshipChallenge/${data.public_id}.jpg`}>
                                                         <Image publicId={data.public_id}>
                                                             <Transformation
                                                                 crop="scale"
@@ -60,7 +61,8 @@ class Main extends Component {
                                                             />
                                                         </Image>
                                                     </a>
-                                                    <div className="desc">Created at {data.created_at}</div>
+                                                    {/* Use for created at date and time */}
+                                                    {/* <div className="desc">Created at {data.created_at}</div> */}
                                                 </div>
                                             </div>
                                         )
@@ -70,11 +72,12 @@ class Main extends Component {
                             <div className="clearfix"></div>
                         </div>
                     </div>
+                    {/* Footer Info */}
                     <FooterHelp className="footer">
                         Learn more about{' '}
                         <Link url="https://www.linkedin.com/in/kayla-newlon/">
                             Kayla Newlon
-  </Link>
+                        </Link>
                     </FooterHelp>
                 </Page>
             </AppProvider>
@@ -85,7 +88,6 @@ class Main extends Component {
 render(<Main />, document.getElementById('container'));
 
 
-// ReactDOM.render(<App/>,document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
