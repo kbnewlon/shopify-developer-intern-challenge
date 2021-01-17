@@ -35,7 +35,7 @@ class Main extends Component {
         return (
             <AppProvider i18n={enTranslations}>
                 <TopBar className="nav" />
-                <Page title="Shopify Internship Challenge">
+                <Page title="Shopify Internship Challenge" className="pageDiv">
                     <div className="main">
                         <h1>Also Made with Polaris</h1>
                         <div className="upload">
