@@ -16,8 +16,8 @@ class Main extends Component {
         }
     }
     componentDidMount() {
-        //pull images in ShopifyInternshipChallenge Folder on Cloudinary
-        axios.get('https://res.cloudinary.com/kaylanewlon/image/list/ShopifyInternshipChallenge.json')
+        //pull images tagged as ShopifyInternshipChallenge
+        axios.get('http://res.cloudinary.com/kaylanewlon/image/list/ShopifyInternshipChallenge.json')
             .then(res => {
                 console.log(res.data.resources);
                 this.setState({ gallery: res.data.resources });
@@ -48,14 +48,14 @@ class Main extends Component {
                                 {
                                     this.state.gallery.map(data => {
                                         return (
-                                            <div className="responsive" key={data.public_id}>
-                                                <div className="img">
-                                                    <a target="_blank" rel="noreferrer" href={`https://res.cloudinary.com/kaylanewlon/image/upload/${data.public_id}.jpg`}>
+                                            // <div className="responsive" key={data.public_id}>
+                                                <div className="images" key={data.public_id}>
+                                                    <a target="_blank" rel="noreferrer" href={`https://res.cloudinary.com/kaylanewlon/image/upload/ShopifyInternshipChallenge/${data.public_id}.jpg`}>
                                                         <Image publicId={data.public_id}>
                                                             <Transformation
                                                                 crop="scale"
                                                                 width="300"
-                                                                height="200"
+                                                                height="300"
                                                                 dpr="auto"
                                                                 responsive_placeholder="blank"
                                                             />
@@ -64,14 +64,17 @@ class Main extends Component {
                                                     {/* Use for created at date and time */}
                                                     {/* <div className="desc">Created at {data.created_at}</div> */}
                                                 </div>
-                                            </div>
+                                            // </div>
                                         )
                                     })
                                 }
+                               
+
                             </CloudinaryContext>
                             <div className="clearfix"></div>
                         </div>
                     </div>
+                    <div className="footer">
                     {/* Footer Info */}
                     <FooterHelp className="footer">
                         Learn more about{' '}
@@ -79,6 +82,7 @@ class Main extends Component {
                             Kayla Newlon
                         </Link>
                     </FooterHelp>
+                    </div>
                 </Page>
             </AppProvider>
         );
