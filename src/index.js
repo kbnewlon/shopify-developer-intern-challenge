@@ -17,7 +17,7 @@ class Main extends Component {
     }
     componentDidMount() {
         //pull images tagged as ShopifyInternshipChallenge
-        axios.get('http://res.cloudinary.com/kaylanewlon/image/list/ShopifyInternshipChallenge.json')
+        axios.get('//res.cloudinary.com/kaylanewlon/image/list/ShopifyInternshipChallenge.json')
             .then(res => {
                 console.log(res.data.resources);
                 this.setState({ gallery: res.data.resources });
